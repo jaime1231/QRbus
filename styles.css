@@ -1,0 +1,227 @@
+/* Variables de diseño */
+:root {
+    --primary-color: #4361ee;
+    --primary-dark: #3a56d4;
+    --secondary-color: #4895ef;
+    --accent-color: #4cc9f0;
+    --text-color: #2b2d42;
+    --light-gray: #f8f9fa;
+    --medium-gray: #e9ecef;
+    --dark-gray: #6c757d;
+    --white: #ffffff;
+    --success-color: #4ad66d;
+    --warning-color: #f8961e;
+    --error-color: #ef233c;
+    --border-radius: 12px;
+    --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.download-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* Tarjeta de la aplicación */
+.app-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Encabezado de la app */
+.app-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 30px 25px;
+    text-align: center;
+    position: relative;
+}
+
+.version-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.app-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--white);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.app-icon i {
+    font-size: 40px;
+    color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.app-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.app-slogan {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Detalles de la app */
+.app-details {
+    padding: 25px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    color: var(--dark-gray);
+    font-size: 14px;
+}
+
+.detail-value {
+    font-weight: 600;
+}
+
+/* Botón de descarga */
+.download-button {
+    display: block;
+    width: calc(100% - 50px);
+    margin: 0 auto 20px;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+.download-button:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(67, 97, 238, 0.4);
+}
+
+.download-button:active {
+    transform: translateY(0);
+}
+
+.download-button i {
+    margin-right: 8px;
+}
+
+/* Progreso de descarga */
+.download-progress {
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 600;
+    min-height: 20px;
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+/* Instrucciones */
+.instructions {
+    background: var(--light-gray);
+    padding: 20px;
+    margin: 20px;
+    border-radius: var(--border-radius);
+}
+
+.instructions h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.instructions h3 i {
+    margin-right: 10px;
+    color: var(--secondary-color);
+}
+
+.instructions ol {
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.instructions li {
+    margin-bottom: 8px;
+    color: var(--dark-gray);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .app-header {
+        padding: 25px 15px;
+    }
+    
+    .app-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .app-title {
+        font-size: 22px;
+    }
+    
+    .download-button {
+        width: calc(100% - 30px);
+        padding: 14px;
+    }
+}
