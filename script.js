@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     downloadBtn.addEventListener('click', function() {
         // Mostrar confirmación
-        const confirmed = confirm('¿Deseas descargar MiApp Pro? (24.5 MB)');
+        const confirmed = confirm('¿Deseas descargar QRbus?');
         
         if(confirmed) {
             // Mostrar estado de descarga
